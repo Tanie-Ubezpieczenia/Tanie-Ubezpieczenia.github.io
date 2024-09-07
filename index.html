@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Łukasz Nodzak - Agent PZU</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* Resetowanie stylów */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ustawienia główne strony */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #2b2d42;
+            color: #edf2f4;
+            line-height: 1.8;
+            scroll-behavior: smooth; /* Płynne przewijanie */
+            overflow-x: hidden;
+        }
+
+        /* Sekcje */
+        section {
+            padding: 60px 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 60px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 1100px;
+            margin: 100px auto;
+            background-color: #3a3d5c; /* Nowy, ciemny kolor tła */
+        }
+
+        /* Ulepszony nagłówek */
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Ciemniejszy overlay */
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+        }
+
+        /* Ulepszona nawigacja */
+        nav {
+            background-color: rgba(43, 45, 66, 0.7);
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 25px;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: all 0.3s;
+            border-radius: 25px;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            width: 100%;
+            height: 4px;
+            background: #6c63ff;
+            transition: all 0.3s;
+            transform: translateX(-50%);
+            opacity: 0;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #6c63ff;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+        nav a:hover::after {
+            opacity: 1;
+            height: 6px;
+            background: #fffc00;
+        }
+
+        /* Stylowanie zdjęć */
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Kolorowe tła w sekcjach */
+        section#home {
+            background-color: #8d99ae;
+        }
+
+        section#services {
+            background-color: #ef233c;
+        }
+
+        section#about {
+            background-color: #d90429;
+        }
+
+        section#contact {
+            background-color: #4a4e69;
+        }
+
+        /* Efekt fade-in */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stopka */
+        footer {
+            background-color: #2b2d42;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Stylowanie responsywne */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+
+            section h2 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Nagłówek -->
+<header>
+    <h1>Łukasz Nodzak - Agent PZU</h1>
+    <p>Profesjonalne ubezpieczenia dostosowane do Twoich potrzeb</p>
+</header>
+
+<!-- Nawigacja -->
+<nav>
+    <a href="#home">Strona Główna</a>
+    <a href="#services">Usługi</a>
+    <a href="#about">O mnie</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<!-- Sekcja Strona Główna -->
+<section id="home" class="fade-in">
+    <h2>Witaj na mojej stronie</h2>
+    <p>Jako doświadczony agent PZU oferuję kompleksowe usługi ubezpieczeniowe, które zapewnią Ci spokój i bezpieczeństwo.</p>
+    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzk1NzB8MHwxfGFsbHwxfHx8fHx8fHwxNjEwNjE4NjAz&ixlib=rb-1.2.1&q=80&w=1080" alt="Ubezpieczenia i bezpieczeństwo">
+</section>
+
+<!-- Sekcja Usługi -->
+<section id="services" class="fade-in">
+    <h2>Nasze Usługi</h2>
+    <p>Oferujemy szeroki zakres usług ubezpieczeniowych, w tym ubezpieczenia zdrowotne, majątkowe i komunikacyjne.</p>
+    <img src="https://images.unsplash.com/photo-1495576770986-9e30d71b6e75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzk1NzB8MHwxfGFsbHwxMHx8fHx8fHwxNjEwNjE4NjAz&ixlib=rb-1.2.1&q=80&w=1080" alt="Usługi ubezpieczeniowe">
+</section>
+
+<!-- Sekcja O mnie -->
+<section id="about" class="fade-in">
+    <h2>O mnie</h2>
+    <p>Jestem Łukasz Nodzak, doświadczonym agentem PZU z wieloletnim doświadczeniem w branży ubezpieczeniowej. Moim celem jest zapewnienie Ci najlepszej ochrony.</p>
+    <img src="https://images.unsplash.com/photo-1596887151714-89f54b6df269?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzk1NzB8MHwxfGFsbHw3fHx8fHx8fDE2MTA2MTg2MDM&ixlib=rb-1.2.1&q=80&w=1080" alt="Portret Łukasza Nodzak">
+</section>
+
+<!-- Sekcja Kontakt -->
+<section id="contact" class="fade-in">
+    <h2>Kontakt</h2>
+    <p>Chcesz uzyskać więcej informacji lub umówić się na spotkanie? Skontaktuj się ze mną!</p>
+    <img src="https://images.unsplash.com/photo-1503792472804-5a6b9d5588a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzk1NzB8MHwxfGFsbHw1fHx8fHx8fDE2MTA2MTg2MDM&ixlib=rb-1.2.1&q=80&w=1080" alt="Spotkanie z klientem">
+</section>
+
+<!-- Stopka -->
+<footer>
+    <p>© 2024 PZU - Wszystkie prawa zastrzeżone</p>
+</footer>
+
+<script>
+    // JavaScript do animacji fade-in
+    const sections = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Obsługa płynnego przewijania dla niektórych przeglądarek
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
